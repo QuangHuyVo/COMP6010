@@ -1,0 +1,143 @@
+# Variables
+#Question 1:
+a = 4  + 3 * 2 + (2-1)
+print (a)
+
+b = 3 ** 2 * 2 ** 2
+print (b)
+
+#Question 2:
+#Valid
+a = 10
+
+"""
+#Not Valid
+1a = 10
+
+#not Valid
+10 = a
+"""
+
+#Valid
+a, b = 10, 18
+print (a,b)
+
+#Valid
+"""a, b = a + 5, b + 8
+print(a,b)
+"""
+
+#Valid
+e, f = True, "Hello"
+print(e, f)
+
+#Question 3:
+a = 18
+b = 4.7
+c = 4/3
+d = 4//3
+e = True
+g = "COMP 6010" + " " + "is the best"
+f = 4 == 9
+h = b + a
+i = "My tutor is ____"
+j = 4 ** 2
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(g))
+print(type(f))
+print(type(h))
+print(type(i))
+print(type(j))
+
+#Question 4:
+myString ="abcdef"
+print(myString.upper())
+
+#Question 5:
+theString = "    Welcome to COMP6010    "
+anotherString = theString.strip()
+print(anotherString)
+print(theString)
+
+#Question 6: 
+myString = "abcdefghijklmnop"
+print( "line 1-" + myString[ : : ] )
+print( "line 2-" + myString[5 : 2] )
+print( "line 3-" + myString[5 : -2] )
+print( "line 4-" + myString[5 : 6] )
+print( "line 5-" + myString[5 : 12] )
+print( "line 6-" + myString[1 : : 2] )
+print( "line 7-" + myString[1 : : 3] )
+print( "line 8-" + myString[ : : 2] )
+print( "line 9-" + myString[ : : 3] )
+
+#Question 7: 
+myString = "abcdefghijklmnop"
+print( "line 10-" + myString[ : : -1 ] )
+
+
+
+# Conditions:
+#Question 1:
+
+if 5 > 3:
+    print("this is Amazing !!!")
+
+#Question 2:
+
+x = 30
+if x % 2 != 0:
+    print ("x is odd")
+else:
+    print("x is even")
+if x % 3 == 0:
+    print ("x is divisible by 3")
+else:
+    print("x is not divisible by 3")
+
+
+
+#Question 3:
+x = 0
+if x > 0:
+    print("x is positive")
+elif x < 0:
+    print ("x is negative")
+else: 
+    x == 0
+    print ("x is zero")
+
+
+
+
+
+#Question 4: 
+x = 5
+
+if x > 3:
+    x = x * 2
+    if x == 3:
+        x = x + 5
+        if x % 2 == 0:
+            x = 4
+        else:
+            x = x * 4
+elif x < 0:
+    if x % 2 == 0:
+        x = x + 1
+    elif x == 15:
+        x = x - 1
+    x = x + 6
+else:
+    x + 1
+    if x == 3:
+        x = x + 2
+    else:
+        x = x + 10
+    x = x + 50
+print(x)

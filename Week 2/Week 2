@@ -1,0 +1,166 @@
+a = 5
+b = 6
+print (a==b)
+b = 5
+print (a==b)
+
+"""
+data types:
+int
+string
+float
+boolean
+lists #covered next week
+
+"""
+
+
+name = "Carl"
+surname = "Svensson"
+
+print(len(name))
+print(len(name+surname)), #this is in on line...
+a = name + surname
+b = len(a)
+print(b)
+
+
+amountRequested =360 #assume this is a valid number to enter
+print(("amountRequested was ") + str(amountRequested))
+
+
+# what number of $50 notes are needed?
+# what number of $20 notes are needed?
+
+numberOf20s = 0 #think carefully about default values
+numberOf50s = 0
+#dont' start variable names with numbers
+
+# a % b ... remainder
+# a // b ... interger division
+# a / b ... floating point division
+
+#pseudocode (planning)
+#if amountRequested >= 140 
+    #work out how many $50 notes are needed for the rest
+
+if(amountRequested >= 140):
+    temp = amountRequested - 140
+    numberOf50s = temp // 50
+    amountRequested = temp - (numberOf50s * 50) +140
+    #print(("amountRequested is now ") + str(amountRequested))
+
+# take away that $
+#use our hard coded calculations for the rest
+if(amountRequested in {20, 40, 60 ,80}):
+    numberOf20s = amountRequested // 20
+else:
+    if(amountRequested in{100,120,140}):
+        numberOf50s = numberOf50s + 2
+        numberOf20s = (amountRequested - 100) // 20
+    else: 
+        #what's left at this point?
+        # 50, 70, 90, 110, 130
+        numberOf50s = numberOf50s + 1
+        numberOf20s = (amountRequested - 50) // 20
+        
+
+
+temp50s = amountRequested // 50
+numberOf20s = amountRequested // 20
+
+
+print('Number of $20 notes is ' + str(numberOf20s))
+print('Number of $50 notes is ' + str(numberOf50s))
+
+
+#print whether the validEvenString variable
+#is a string and has an even number of character
+ValidEvenString = "CarlSvensson"
+
+if(type(ValidEvenString) == str):
+    print ("it is a string")
+    if(len(ValidEvenString) % 2 == 0):
+        print("it is a valid even string")
+    else: 
+        print("it is NOT a valid even string")
+
+else:
+    print ("it is NOT a string")
+
+
+print(ord('a'))
+print(ord('A'))
+# ASCII characters
+
+print("A" == "a")
+print("Carl" > "CARL")
+#notice that CASE MATTERS with comparisions! 
+
+#strings and slicing
+
+s = "CarlSvensson"
+
+#get parts of the string to work with 
+#s[] #[ start: stop: step]
+print(s[::2]) #print(s[0:len(s):2])
+print(s[1::2])
+print(s[::-1])
+print(s[:6:-1]) #go backwards until index 6 of the original string
+print(s)
+
+
+print(range(5,20,3))
+c = 5 * 5
+d = 5 ** 5
+print(c)
+print(d)
+
+
+x = 10
+y = 20
+if x < y:
+  print(str(x) + " is less than " + str(y))
+
+
+
+amount=60
+
+if(type(amount) != int):
+    print("not an integer")
+    quit()
+    
+if(amount % 10 != 0 or amount < 20 or amount == 30):
+    print("not a valid amount to withdraw")
+    quit()
+
+#at this point we can assume that:
+# - amount is an integer
+# - amount is 20, 40, or any multiple of 10 above 40
+print("amount to withdraw is $" + str(amount))
+
+
+# 2 scenarios: 
+# 1) number ending in $10 or $30
+# 2) number enging in $0, $20, $40, $50, $60, $70. $80, $90
+
+numberof50s = 0
+numberof20s = 0
+
+if(amount % 100 in {10, 30, 60, 80}): #amount % 100 ==01 or amount % 100 == 03
+    #scenario 1
+    numberof50s = (amount//50) -1
+    amount = amount - (numberof50s * 50)
+    numberof20s = (amount//20)
+else:
+    #scenario 2
+    numberof50s = (amount//50)
+    amount = amount - (numberof50s * 50)
+    numberof20s = (amount//20)
+
+print(numberof50s)
+print(numberof20s)
+print("Number of 50s is " + str(numberof50s))
+print("Number of 50s is " + str(numberof20s))
+print("Total amount withdrawn is $" + str((numberof50s*50) + (numberof20s*20)))
+

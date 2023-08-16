@@ -1,0 +1,4 @@
+print((5 + 7 + (12 + 3)) * (2 + 7))
+print(bin(37)) #print the number in binary (base 2)
+print(oct(37)) #print the number in octal (base 8)
+print(hex(37)) #print the number in hexadecimal (base 16)
