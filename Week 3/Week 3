@@ -1,52 +1,164 @@
 #conditionals
+#if statement
+if(5 < 3):
+  print(1);
+  print(2);
 
 
+#if else statement
+if(5 < 3):
+  print(1);
+else:
+  print(2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+a = 5;
+if(a == 1):
+  print(1);
+elif(a == 2):
+  print(2);
+elif(a == 3):
+  print("I don't care")
+else:
+  print("default case if nothing else")
 
 
 
 #what if I want to do multiple runs of the same code?
 #loops
 
-#why? -> counting
+#why?
+# -> counting
 
-#loop through from 1 - 10 and print out the square of each number.
+# loop through from 1 - 10 and print out the square of each number.
 
-#"Range" (3,5)
-#"Range" (1,10)
-#"Range" (2,10,2)
+# "Range"  (3,5)
+# "Range"  (1,10)
+# "Range"  (2,10,2)
 
-for i in range(1,10): # 1 up to but not  including 10
-    print (i**2)
+for i in range(1,10): # 1 up to but not including 10
+  print(i**2)
 
 #for i in [1,2,3,4,5,6,7,8,9]
+
 
 #while loops...
 #do the loop while a condition is true.
 i = 0
-finished = Fales
+finished = False
 
-while i < 10: 
-    print (i**2) 
-    #welcome to an infinite loop :)
+"""
+while i < 10:
+  print(i**2)
+  #welcome to an infinite loop :)
+"""
 
-while i < 10 and !finished:
-    print (i**2)
+x = 0
+while x < 10:
+  print(x) #Q1: how many times does this line get executed? 10
+  x + 1 
+#Q2: what will be printed below?
+print(x)
 
-if i%5 == 4:
-    finished = True
+#trace
+# x = 0
+# check x < 10 =>true
+# enter the loop
+# Iteration 1:
+  # print 0
+  # x = x+ 1 => 1
+# check 1 < 10 =>true
+# enter the loop
+# Iteration 2:
+  # print 1
+  # x = x+ 1 => x = 2
+
+
+
+i = 0
+finished = False
+while i < 10 and not finished:
+  print(i**2)  #Q1: how many times does this line get executed? 4
+  #update...
+  i+= 1 # i = i + 1
+  if i%5 == 4: #Q2: how many times does this line get executed? 4
+    finshed = True #Q3: how many times doe this line get executed? 1
+
+#tracing the loops
+#iteration 1:
+# check if i < 10 => yes
+# check if !finished == True => yes
+# enter the loop
+  # print 0 * 0
+  # i = 1
+  #if i%5 == 4 ==> false
+
+#Iteration 2
+# check if i < 10 => yes
+# check if !finished == True => yes
+# enter the loop
+  #print 1*1
+  #i = 2
+  #if i%5 == 4 ==> false
+
+#Iteration 3
+# check if i < 10 => yes
+# check if !finished == True => yes
+# enter the loop
+  #print 2*2
+  #i = 3
+  #if i%5 == 4 ==> false
+
+#Iteration 4
+# check if i < 10 => yes
+# check if !finished == True => yes
+# enter the loop
+  #print 3*3
+  #i = 4
+  #if i%5 == 4 ==> true
+    #set finished = True
+
+#Iteration 5
+# check if i < 10 => yes
+# check if !finished == False => no
+#exit the loop and continue after
     
+x = 0
+while x < 10:
+  print(x) #Q1: how many times does this line get executed? 10
+  x = x + 1
+#Q2: what will be printed below?
+print("x is " + str(x))
+print("x is", x)
 
+print(True and True)
+print(False and True)
+print(True and False)
+print(False and False)
+
+
+# a fun problem in maths
+#collatz conjecture
+number = 3
+
+while(number != 1):
+  if(number % 2 == 0):
+    number = number // 2
+  else:
+    number = 3 * number + 1
+  print(number)
+
+
+
+  #recap
+# tabbing is important
+#   expecially with code block
+# don't assume your code works... compile and check with a range of values to test
+# if you are not getting expected results, hand trace your code.
+# control structures:
+#     conditions
+#       if      if else       if elif     if elif elif elif...    if elif...else
+#     loops
+#        for >> iterate through values (e.g. a list ,table, range)
+#        while >> good for conditions and checks
+#                   (go through values that aren't in a ranage)
+#                   (go through while a set of conditions are true)
