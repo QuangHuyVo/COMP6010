@@ -26,7 +26,7 @@ if type(x) is int:
 
 #Question 3: 
 x = "abc"
-if type(x) is int:   
+if type(x) is int or type(x) is float:   
     if (x < 5):
         print("this statement is less than 5")
     elif (x == 5):
@@ -38,22 +38,56 @@ else:
 
 #Question 4: 
 
-assignmentMark = 6.5
+assignmentMark = 8
 assignmentMarkedOutOf = 9
 grade = (assignmentMark / assignmentMarkedOutOf) * 100
 percentage = (round(grade,2))
 print(percentage,"%")
 
-if (0 < grade < 100):
-    if (grade <50):
-        print ("F")
-    elif (50 <= grade <65):
-        print ("Pass")
-    elif (65 <= grade <75):
-        print ("Credit")
-    elif (75 <= grade <85):
-        print ("Distinction")
-    elif (85 <= grade <= 100):
-        print ("High Distinction")
+if (grade <50):
+    print ("F")
+elif (50 <= grade <65):
+    print ("Pass")
+elif (65 <= grade <75):
+    print ("Credit")
+elif (75 <= grade <85):
+    print ("Distinction")
+elif (85 <= grade <= 100):
+    print ("High Distinction")
 else: 
     print ("error")
+
+#Question 5: 
+
+
+#Question 6: 
+    # Example A
+x = 3
+for x in range(1,10):
+    print(x)
+    
+    # Example F
+for x in ["Alex","Bob","Chris","Danni"]:
+    print("printed a line")
+
+
+#Question 7:
+#1
+for x in range (5,16):
+    print (x)
+
+#2
+for x in range (5,16,2):
+    print (x)
+
+#3
+for x in range (6,16,2):
+    print (x)
+
+#Question 8: 
+
+#Question 9:
+total = 0
+for x in range (5,16,2):
+    total = total + x
+print (total)
