@@ -44,18 +44,16 @@ grade = (assignmentMark / assignmentMarkedOutOf) * 100
 percentage = (round(grade,2))
 print(percentage,"%")
 
-# if (0 < grade < 100):
-#     if (grade <50):
-#         print ("F")
-#     elif (50 <= grade <65):
-#         print ("Pass")
-#     elif (65 <= grade <75):
-#         print ("Credit")
-#     elif (75 <= grade <85):
-#         print ("Distinction")
-#     elif (85 <= grade <= 100):
-#         print ("High Distinction")
-# else: 
-#     print ("error")
-
-
+if (0 < grade < 100):
+    if (grade <50):
+        print ("F")
+    elif (50 <= grade <65):
+        print ("Pass")
+    elif (65 <= grade <75):
+        print ("Credit")
+    elif (75 <= grade <85):
+        print ("Distinction")
+    elif (85 <= grade <= 100):
+        print ("High Distinction")
+else: 
+    print ("error")
